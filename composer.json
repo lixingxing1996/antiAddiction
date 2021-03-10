@@ -1,0 +1,24 @@
+{
+    "name": "lixingxing1996/anti_addiction",
+    "description": "China anti addiction for php",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lixingxing",
+            "email": "1348647935@qq.com"
+        }
+    ],
+    "require": {
+        "spomky-labs/php-aes-gcm": "^1.2",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lixingxing1996\\AntiAddiction\\": "src"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5",
+        "mockery/mockery": "^1.3"
+    }
+}
