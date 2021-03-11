@@ -23,6 +23,7 @@ $ use Lixingxing1996\AntiAddiction\Authentication;
 2. 实例化应用
 
 ```php
+// $url 为测试url
 $ new Authentication($appId, $bizId, $secretKey, $url);
 ```
 
