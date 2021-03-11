@@ -1,9 +1,10 @@
 <?php
 
 // 引入
-require __DIR__ .'/vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 header("Content-Type:text/html;charset=utf-8");
-use Lixingxing1996\AntiAddiction\AntiAddiction;
+
+use Lixingxing1996\AntiAddiction\Authentication;
 
 //预置参数
 //应用标识（APPID）： 游戏备案识别码（bizId）： 模式：
@@ -13,9 +14,26 @@ $bizId = '1101999999';
 $secretKey = '6dd17df292a3b8350378641e61496bbb';
 
 
-$test = new AntiAddiction($appId,$bizId,$secretKey);
+$url = 'https://wlc.nppa.gov.cn/test/collection/loginout/9PrEdQ';
+
+$test = new Authentication($appId, $bizId, $secretKey, $url);
 
 
-$re = $test->authCheck('某二一', '11000019010101000','200000000000000001');
+$object = (object) [
+   [
+       'no'=>'111122',
+       'si'=>'dsadswa',
+       'bt'=>1,
+       'ot'=>time(),
+       'ct'=>2,
+       'di'=>'12123',
+       'pi'=>'1fffbjzos82bs9cnyj1dna7d6d29zg4esnh99u'
+   ]
+];
 
-var_dump($re);exit;
+
+
+$re = $test->behavior($object);
+
+var_dump($re);
+exit;

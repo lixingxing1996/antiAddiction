@@ -1,27 +1,35 @@
-<h1 align="center"> antiAddiction </h1>
+<h1 align="center">国家网络游戏防沉迷实名认证接口</h1>
 
-<p align="center"> ????????????? php SDK.</p>
+<p align="center">网络游戏防沉迷实名认证系统 php SDK.</p>
 
-
-## Installing
+## 安装
 
 ```shell
 $ composer require lixingxing1996/antiAddiction -vvv
 ```
 
-## Usage
+## 开发完善计划
 
-TODO
+1. 创建基础的防沉迷认证接口
 
-## Contributing
+## 使用帮助
 
-You can contribute in one of three ways:
+1. 引入
 
-1. File bug reports using the [issue tracker](https://github.com/lixingxing1996/antiAddiction/issues).
-2. Answer questions or fix bugs on the [issue tracker](https://github.com/lixingxing1996/antiAddiction/issues).
-3. Contribute new features or update the wiki.
+```php
+$ use Lixingxing1996\AntiAddiction\Authentication;
+```
 
-_The code contribution process is not very formal. You just need to make sure that you follow the PSR-0, PSR-1, and PSR-2 coding guidelines. Any new code contributions must be accompanied by unit tests where applicable._
+2. 实例化应用
+
+```php
+$ new Authentication($appId, $bizId, $secretKey, $url);
+```
+
+PS: 当测试模式中，直接传递测试链接 例如测试上报接口：https://wlc.nppa.gov.cn/test/collection/loginout/9PrEdQ
+直接传递
+
+3. 条件有限，仅测试通过第一接口
 
 ## License
 
