@@ -24,8 +24,11 @@ $ use Lixingxing1996\AntiAddiction\Authentication;
 
 ```php
 // $url 为测试url
+
 $ new Authentication($appId, $bizId, $secretKey, $url);
+
 ```
+
 
 PS: 当测试模式中，直接传递测试链接 例如测试上报接口：https://wlc.nppa.gov.cn/test/collection/loginout/9PrEdQ
 直接传递
